@@ -1,0 +1,92 @@
+/* ── HEADER ── */
+
+let lastScrollY = window.scrollY;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY < lastScrollY || currentScrollY < 100) {
+    header.classList.remove("header--hidden");
+  } else {
+    header.classList.add("header--hidden");
+  }
+
+  lastScrollY = currentScrollY;
+});
+
+/* ── HERO ── */
+
+const glove = document.querySelector(".hero__glove");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  glove.style.transform = `translateY(${scrollY * 0.3}px)`;
+});
+
+/* ── ABOUT ── */
+
+const swiper = new Swiper(".about__swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 16,
+  slidesOffsetBefore: Math.max(32, (window.innerWidth - 1280) / 2 + 32),
+  slidesOffsetAfter: Math.max(32, (window.innerWidth - 1280) / 2 + 32),
+  navigation: {
+    nextEl: ".about__btn--next",
+    prevEl: ".about__btn--prev",
+  },
+});
+
+/* ── CERTIFICATES ── */
+
+function openModal(item) {
+  const src = item.querySelector("img").src;
+  document.getElementById("modalImg").src = src;
+  document.getElementById("certModal").classList.add("active");
+}
+
+function closeModal() {
+  document.getElementById("certModal").classList.remove("active");
+}
+
+/* ── CONTACT ── */
+
+const pepper = document.querySelector(".contact__image");
+const contactSection = document.querySelector(".contact");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY;
+  const sectionTop = contactSection.offsetTop;
+  const relative = scrollY - sectionTop;
+
+  glove.style.transform = `translateY(${scrollY * 0.15}px)`;
+  pepper.style.transform = `translateY(${relative * 0.3}px)`;
+});
+
+/* Form */
+
+const form = document.querySelector(".contact__form");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  const response = await fetch("send.php", {
+    method: "POST",
+    body: formData,
+  });
+
+  const result = await response.text();
+
+  if (result === "ok") {
+    form.innerHTML = `
+      <div class="form-success">
+        <h3>Заявка отправлена</h3>
+        <p>Мы свяжемся с вами в ближайшее время</p>
+      </div>
+    `;
+  } else {
+    alert("Ошибка отправки");
+  }
+});

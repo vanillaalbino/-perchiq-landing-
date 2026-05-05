@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PerchiQ — Нитриловые перчатки</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="nav__logo">PERCHIQ</div>
+        <ul class="nav__links">
+          <li><a href="#about">О бренде</a></li>
+          <li><a href="#advantages">Преимущества</a></li>
+          <li><a href="#certificates">Сертификаты</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <a href="#contact" class="btn btn--sm btn--primary">Оставить заявку</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="section hero">
+        <div class="container grid-12">
+          <div class="hero__inner">
+            <h1 class="hero__title display-3xl fw-extrabold">
+              PERCHI<span>Q</span>
+            </h1>
+            <p class="hero__text text-lg fw-medium">
+              Профессиональные нитриловые перчатки для HoReCa,<br />
+              маникюрных салонов, производства и автосервисов.<br />
+              Прямые поставки с вьетнамской фабрики.
+            </p>
+            <div class="hero__btns">
+              <a href="#contact" class="btn btn--lg btn--outline">
+                Оставить заявку
+                <img src="assets/icons/arrow-sm.svg" alt="" />
+              </a>
+              <a href="#about" class="btn btn--lg btn--ghost">
+                Узнать больше
+                <svg
+                  style="transform: rotate(90deg)"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.16675 10L15.8334 10M15.8334 10L10.0001 4.16671M15.8334 10L10.0001 15.8334"
+                    stroke="currentColor"
+                    stroke-width="1.67"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="hero__visual">
+              <img src="assets/images/glove.png" class="hero__glove" />
+              <img src="assets/images/gradient.svg" class="hero__gradient" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="section about">
+        <div class="swiper about__swiper">
+          <div class="about__badge">
+            <img src="assets/images/star.svg" alt="" />
+            <span>Прямые поставки с фабрики</span>
+          </div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide about__slide">
+              <img src="assets/images/1.jpg" alt="Производство" />
+            </div>
+            <div class="swiper-slide about__slide">
+              <img src="assets/images/2.jpg" alt="Производство" />
+            </div>
+            <div class="swiper-slide about__slide">
+              <img src="assets/images/3.jpg" alt="Производство" />
+            </div>
+            <div class="swiper-slide about__slide">
+              <img src="assets/images/4.jpg" alt="Производство" />
+            </div>
+          </div>
+          <div class="about__nav">
+            <button class="about__btn--prev" type="button">
+              <svg
+                style="transform: rotate(180deg)"
+                width="38"
+                height="29"
+                viewBox="0 0 38 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.18021e-06 14.207L36 14.207M36 14.207L22.5 0.707031M36 14.207L22.5 27.707"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+            <button class="about__btn--next" type="button">
+              <svg
+                width="38"
+                height="29"
+                viewBox="0 0 38 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.18021e-06 14.207L36 14.207M36 14.207L22.5 0.707031M36 14.207L22.5 27.707"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="container grid-12">
+          <div class="about__content">
+            <h2 class="about__title display-xl">
+              <span class="fw-extrabold" style="color: var(--accent)"
+                >ВЬЕТНАМ.</span
+              >
+              <span class="fw-medium">КАЧЕСТВО БЕЗ КОМПРОМИССОВ</span>
+            </h2>
+            <p class="about__text text-lg fw-medium">
+              Мы выбрали вьетнамского производителя не случайно. Это один из
+              ведущих регионов по производству нитриловых перчаток в Азии —
+              современные заводы, строгий контроль качества и соответствие
+              международным стандартам.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="advantages" class="section advantages">
+        <div class="container">
+          <h2 class="advantages__title display-xl fw-extrabold">
+            ПОЧЕМУ PERCHI<span style="color: var(--gray-500)">Q</span>
+          </h2>
+          <div class="advantages__grid">
+            <div class="advantages__card">
+              <div class="advantages__icon">
+                <img src="assets/icons/certificate.svg" alt="" />
+              </div>
+              <div class="advantages__card-body">
+                <h3 class="advantages__card-title text-xl fw-semibold">
+                  Сертификаты
+                </h3>
+                <p class="advantages__card-text text-md fw-regular">
+                  Продукция соответствует требованиям российского рынка и
+                  международным стандартам качества.
+                </p>
+              </div>
+            </div>
+            <div class="advantages__card">
+              <div class="advantages__icon">
+                <img src="assets/icons/certificate.svg" alt="" />
+              </div>
+              <div class="advantages__card-body">
+                <h3 class="advantages__card-title text-xl fw-semibold">
+                  Сертификаты
+                </h3>
+                <p class="advantages__card-text text-md fw-regular">
+                  Продукция соответствует требованиям российского рынка и
+                  международным стандартам качества.
+                </p>
+              </div>
+            </div>
+            <div class="advantages__card">
+              <div class="advantages__icon">
+                <img src="assets/icons/certificate.svg" alt="" />
+              </div>
+              <div class="advantages__card-body">
+                <h3 class="advantages__card-title text-xl fw-semibold">
+                  Сертификаты
+                </h3>
+                <p class="advantages__card-text text-md fw-regular">
+                  Продукция соответствует требованиям российского рынка и
+                  международным стандартам качества.
+                </p>
+              </div>
+            </div>
+            <div class="advantages__card">
+              <div class="advantages__icon">
+                <img src="assets/icons/certificate.svg" alt="" />
+              </div>
+              <div class="advantages__card-body">
+                <h3 class="advantages__card-title text-xl fw-semibold">
+                  Сертификаты
+                </h3>
+                <p class="advantages__card-text text-md fw-regular">
+                  Продукция соответствует требованиям российского рынка и
+                  международным стандартам качества.
+                </p>
+              </div>
+            </div>
+            <div class="advantages__card">
+              <div class="advantages__icon">
+                <img src="assets/icons/certificate.svg" alt="" />
+              </div>
+              <div class="advantages__card-body">
+                <h3 class="advantages__card-title text-xl fw-semibold">
+                  Сертификаты
+                </h3>
+                <p class="advantages__card-text text-md fw-regular">
+                  Продукция соответствует требованиям российского рынка и
+                  международным стандартам качества.
+                </p>
+              </div>
+            </div>
+            <div class="advantages__card">
+              <div class="advantages__icon">
+                <img src="assets/icons/certificate.svg" alt="" />
+              </div>
+              <div class="advantages__card-body">
+                <h3 class="advantages__card-title text-xl fw-semibold">
+                  Сертификаты
+                </h3>
+                <p class="advantages__card-text text-md fw-regular">
+                  Продукция соответствует требованиям российского рынка и
+                  международным стандартам качества.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="video" class="section video">
+        <div class="container">
+          <h2 class="video__title display-xl fw-extrabold">
+            ТЕСТ НА ПРОЧНОСТЬ
+          </h2>
+          <div class="video__video">
+            <iframe
+              src="https://rutube.ru/play/embed/ID"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section id="clients" class="section clients">
+        <div class="container">
+          <h2 class="clients__title display-xl fw-extrabold">
+            ДЛЯ ТЕХ, КТО<br />РАБОТАЕТ РУКАМИ
+          </h2>
+          <div class="clients__grid">
+            <div class="clients__card clients__card--wide">
+              <img
+                src="assets/images/horeca.jpg"
+                alt="HoReCa"
+                class="clients__card-img"
+                style="object-position: center 30%"
+              />
+              <div class="clients__card-body">
+                <h3 class="clients__card-title text-xl fw-semibold">
+                  HoReCa & Рестораны
+                </h3>
+                <p class="clients__card-text text-md fw-regular">
+                  Кухня, заготовка, подача — там где важна гигиена и скорость
+                </p>
+              </div>
+            </div>
+
+            <div class="clients__card">
+              <img
+                src="assets/images/manicure.jpg"
+                alt="Маникюрные салоны"
+                class="clients__card-img"
+              />
+              <div class="clients__card-body">
+                <h3 class="clients__card-title text-xl fw-semibold">
+                  Маникюрные салоны
+                </h3>
+                <p class="clients__card-text text-md fw-regular">
+                  Защита мастера и клиента, смена между каждым посетителем
+                </p>
+              </div>
+            </div>
+
+            <div class="clients__card">
+              <img
+                src="assets/images/industry.jpg"
+                alt="Промышленность"
+                class="clients__card-img"
+              />
+              <div class="clients__card-body">
+                <h3 class="clients__card-title text-xl fw-semibold">
+                  Промышленность
+                </h3>
+                <p class="clients__card-text text-md fw-regular">
+                  Долгие смены, механические нагрузки — держат форму весь день
+                </p>
+              </div>
+            </div>
+
+            <div class="clients__card">
+              <img
+                src="assets/images/autoservice.jpg"
+                alt="Автосервисы"
+                class="clients__card-img"
+              />
+              <div class="clients__card-body">
+                <h3 class="clients__card-title text-xl fw-semibold">
+                  Автосервисы
+                </h3>
+                <p class="clients__card-text text-md fw-regular">
+                  Масло, химия, металл — надёжный барьер без потери
+                  чувствительности
+                </p>
+              </div>
+            </div>
+
+            <div class="clients__card">
+              <img
+                src="assets/images/creative.jpg"
+                alt="Творческие мастерские"
+                class="clients__card-img"
+              />
+              <div class="clients__card-body">
+                <h3 class="clients__card-title text-xl fw-semibold">
+                  Творческие мастерские
+                </h3>
+                <p class="clients__card-text text-md fw-regular">
+                  Краски, смолы, лаки — работаешь чисто, руки остаются
+                  свободными
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="certificates" class="section certificates">
+        <div class="container">
+          <h2 class="certificates__title display-xl fw-extrabold">
+            СЕРТИФИКАТЫ КАЧЕСТВА
+          </h2>
+          <div class="certificates__grid">
+            <div class="certificates__item" onclick="openModal(this)">
+              <img src="assets/images/cert-1.jpg" alt="Сертификат 1" />
+            </div>
+            <div class="certificates__item" onclick="openModal(this)">
+              <img src="assets/images/cert-2.jpg" alt="Сертификат 2" />
+            </div>
+            <div class="certificates__item" onclick="openModal(this)">
+              <img src="assets/images/cert-3.jpg" alt="Сертификат 3" />
+            </div>
+            <div class="certificates__item" onclick="openModal(this)">
+              <img src="assets/images/cert-4.jpg" alt="Сертификат 4" />
+            </div>
+            <div class="certificates__item" onclick="openModal(this)">
+              <img src="assets/images/cert-5.jpg" alt="Сертификат 5" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="modal" id="certModal" onclick="closeModal()">
+        <div class="modal__backdrop"></div>
+        <img class="modal__img" id="modalImg" src="" alt="" />
+      </div>
+
+      <section id="contact" class="section contact">
+        <div class="container">
+          <div class="contact__card grid-12">
+            <div class="contact__header">
+              <h2 class="contact__title display-xl fw-extrabold">
+                НАЧНЁМ РАБОТАТЬ
+              </h2>
+              <p class="contact__subtitle text-md fw-regular">
+                Оставьте контакты — мы свяжемся, обсудим объём, сроки и условия.
+                Без лишних слов.
+              </p>
+            </div>
+            <form action="send.php" method="POST" class="contact__form">
+              <div class="form__fields">
+                <div class="form__row form__row--2">
+                  <div class="form__field">
+                    <label class="form__label">Ваше имя</label>
+                    <input
+                      class="form__input"
+                      type="text"
+                      name="name"
+                      placeholder="Иван Петров"
+                      required
+                    />
+                  </div>
+                  <div class="form__field">
+                    <label class="form__label">Компания</label>
+                    <input
+                      class="form__input"
+                      type="text"
+                      name="company"
+                      placeholder="Название компании"
+                    />
+                  </div>
+                </div>
+
+                <div class="form__row form__row--3">
+                  <div class="form__field">
+                    <label class="form__label">Email</label>
+                    <input
+                      class="form__input"
+                      type="email"
+                      name="email"
+                      placeholder="you@company.com"
+                    />
+                  </div>
+                  <div class="form__field">
+                    <label class="form__label">Телефон</label>
+                    <input
+                      class="form__input"
+                      type="tel"
+                      name="phone"
+                      placeholder="+7 (999) 000-00-00"
+                      required
+                    />
+                  </div>
+                  <div class="form__field">
+                    <label class="form__label">Город</label>
+                    <input
+                      class="form__input"
+                      type="text"
+                      name="city"
+                      placeholder="Город"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- анти-бот -->
+              <input type="text" name="website" style="display: none" />
+
+              <button
+                type="submit"
+                class="btn btn--primary btn--lg contact__submit"
+              >
+                Отправить заявку →
+              </button>
+
+              <p class="form__legal text-md">
+                Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+              </p>
+            </form>
+          </div>
+          <div class="contact__image">
+            <img src="assets/images/pepper.png" alt="" role="presentation" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <a
+            href="#"
+            class="footer__logo fw-extrabold"
+            style="color: var(--accent)"
+            >PERCHIQ</a
+          >
+          <p class="footer__copy text-xs fw-regular">
+            © 2026 PERCHIQ. Нитриловые перчатки. Производство Вьетнам.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

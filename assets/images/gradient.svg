@@ -1,0 +1,26 @@
+<svg viewBox="0 0 1400 1400" xmlns="http://www.w3.org/2000/svg">
+  <g filter="url(#filter0)">
+    <circle cx="694.5" cy="694.5" r="248.5" fill="#EB5317"/>
+  </g>
+
+  <g filter="url(#filter1)">
+    <ellipse cx="632.986" cy="502.917" rx="50.5" ry="301.837"
+      transform="rotate(35.1295 632.986 502.917)" fill="white"/>
+  </g>
+
+  <defs>
+    <filter id="filter0"
+      x="0" y="0" width="1400" height="1400"
+      filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="223"/>
+    </filter>
+
+    <filter id="filter1"
+      x="0" y="0" width="1400" height="1400"
+      filterUnits="userSpaceOnUse"
+      color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="100"/>
+    </filter>
+  </defs>
+</svg>
