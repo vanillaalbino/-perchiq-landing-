@@ -1,3 +1,5 @@
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
 /* ── HEADER ── */
 
 let lastScrollY = window.scrollY;
@@ -15,25 +17,60 @@ window.addEventListener("scroll", () => {
   lastScrollY = currentScrollY;
 });
 
-/* ── HERO ── */
+const burger = document.getElementById("burger");
+const navLinks = document.getElementById("navLinks");
+
+burger.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
+
+// закрывать при клике на ссылку
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+  });
+});
+
+// ── HERO ──
 
 const glove = document.querySelector(".hero__glove");
 
+let factor = isMobile ? 0.1 : 0.3;
+
 window.addEventListener("scroll", () => {
   const scrollY = window.scrollY;
-  glove.style.transform = `translateY(${scrollY * 0.3}px)`;
+  glove.style.transform = `translateY(${scrollY * factor}px)`;
 });
 
-/* ── ABOUT ── */
-
-const swiper = new Swiper(".about__swiper", {
+/* ── ABOUT ── */ const swiper = new Swiper(".about__swiper", {
   slidesPerView: "auto",
   spaceBetween: 16,
-  slidesOffsetBefore: Math.max(32, (window.innerWidth - 1280) / 2 + 32),
-  slidesOffsetAfter: Math.max(32, (window.innerWidth - 1280) / 2 + 32),
+
+  slidesOffsetBefore: 32,
+  slidesOffsetAfter: 32,
+
   navigation: {
     nextEl: ".about__btn--next",
     prevEl: ".about__btn--prev",
+  },
+
+  pagination: {
+    el: ".about__pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1.2,
+      slidesOffsetBefore: 16,
+      slidesOffsetAfter: 16,
+      navigation: false,
+    },
+    769: {
+      slidesPerView: "auto",
+      slidesOffsetBefore: 32,
+      slidesOffsetAfter: 32,
+    },
   },
 });
 

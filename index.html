@@ -14,13 +14,16 @@
     <header>
       <nav class="nav">
         <a href="#hero" class="nav__logo">PERCHIQ</a>
-        <ul class="nav__links">
+        <button class="nav__burger" id="burger">&#9776;</button>
+        <ul class="nav__links" id="navLinks">
           <li><a href="#about">О бренде</a></li>
           <li><a href="#advantages">Преимущества</a></li>
           <li><a href="#certificates">Сертификаты</a></li>
           <li><a href="#contact">Контакты</a></li>
         </ul>
-        <a href="#contact" class="btn btn--sm btn--primary">Оставить заявку</a>
+        <a href="#contact" class="btn btn--sm btn--primary nav__cta"
+          >Оставить заявку</a
+        >
       </nav>
     </header>
 
@@ -32,9 +35,12 @@
               PERCHI<span>Q</span>
             </h1>
             <p class="hero__text text-lg fw-medium">
-              Профессиональные нитриловые перчатки для HoReCa,<br />
-              маникюрных салонов, производства и автосервисов.<br />
-              Прямые поставки с вьетнамской фабрики.
+              Мы с тобой незнакомы, но мы думали о тебе как о близком человеке,
+              которому нужно предложить <strong>нитриловые перчатки</strong>.
+              Такие, чтобы нам не было стыдно, чтобы мы всегда в твоих глазах
+              были открытыми и честными. И нам будет приятно, если тебе
+              понравится этот пустячковый расходник, в который мы вложили часть
+              души!
             </p>
             <div class="hero__btns">
               <a href="#contact" class="btn btn--lg btn--outline">
@@ -85,9 +91,16 @@
               <img src="assets/images/3.jpg" alt="Производство" />
             </div>
             <div class="swiper-slide about__slide">
-              <img src="assets/images/4.jpg" alt="Производство" />
+              <img src="assets/images/4.png" alt="Производство" />
+            </div>
+            <div class="swiper-slide about__slide">
+              <img src="assets/images/5.jpg" alt="Производство" />
+            </div>
+            <div class="swiper-slide about__slide">
+              <img src="assets/images/6.png" alt="Производство" />
             </div>
           </div>
+
           <div class="about__nav">
             <button class="about__btn--prev" type="button">
               <svg
@@ -121,21 +134,25 @@
               </svg>
             </button>
           </div>
+          <div class="about__pagination"></div>
         </div>
 
         <div class="container grid-12">
           <div class="about__content">
             <h2 class="about__title display-xl">
+              <span class="fw-medium">Производство находится во</span>
               <span class="fw-extrabold" style="color: var(--accent)"
-                >ВЬЕТНАМ.</span
+                >Вьетнаме.</span
               >
-              <span class="fw-medium">КАЧЕСТВО БЕЗ КОМПРОМИССОВ</span>
             </h2>
             <p class="about__text text-lg fw-medium">
-              Мы выбрали вьетнамского производителя не случайно. Это один из
-              ведущих регионов по производству нитриловых перчаток в Азии —
-              современные заводы, строгий контроль качества и соответствие
-              международным стандартам.
+              Это осознанный выбор перфекциониста, который посетил разные
+              заводы. Были строгие требование не только к контролю качества и
+              соответствию международным стандартам, а так же к репутации
+              компании. Мы работаем с VietGlove. Нитриловые перчатки этой
+              компании широко используются в США, Германии, Бразилии и других
+              странах. Принципы работы компании позволяют нам открыто указывать
+              на упаковке вес и толщину перчатки.
             </p>
           </div>
         </div>
@@ -148,85 +165,79 @@
           <div class="advantages__grid">
             <div class="advantages__card">
               <div class="advantages__icon">
-                <img src="assets/icons/certificate.svg" alt="" />
+                <img src="assets/icons/star.svg" alt="" />
               </div>
               <div class="advantages__card-body">
                 <h3 class="advantages__card-title text-xl fw-semibold">
-                  Сертификаты
+                  Вьетнам
                 </h3>
                 <p class="advantages__card-text text-md fw-regular">
-                  Продукция соответствует требованиям российского рынка и
-                  международным стандартам качества.
+                  Страна производства, в которой знают толк в нитриле.
                 </p>
               </div>
             </div>
             <div class="advantages__card">
               <div class="advantages__icon">
-                <img src="assets/icons/certificate.svg" alt="" />
+                <img src="assets/icons/quality.svg" alt="" />
               </div>
               <div class="advantages__card-body">
                 <h3 class="advantages__card-title text-xl fw-semibold">
-                  Сертификаты
+                  Качество
                 </h3>
                 <p class="advantages__card-text text-md fw-regular">
-                  Продукция соответствует требованиям российского рынка и
-                  международным стандартам качества.
+                  Продукция соответствует международным стандартам.
                 </p>
               </div>
             </div>
             <div class="advantages__card">
               <div class="advantages__icon">
-                <img src="assets/icons/certificate.svg" alt="" />
+                <img src="assets/icons/size.svg" alt="" />
               </div>
               <div class="advantages__card-body">
                 <h3 class="advantages__card-title text-xl fw-semibold">
-                  Сертификаты
+                  Цифры на упаковке
                 </h3>
                 <p class="advantages__card-text text-md fw-regular">
-                  Продукция соответствует требованиям российского рынка и
-                  международным стандартам качества.
+                  Указываем вес и толщину каждого размера. Можно проверить.
                 </p>
               </div>
             </div>
             <div class="advantages__card">
               <div class="advantages__icon">
-                <img src="assets/icons/certificate.svg" alt="" />
+                <img src="assets/icons/documents.svg" alt="" />
               </div>
               <div class="advantages__card-body">
                 <h3 class="advantages__card-title text-xl fw-semibold">
-                  Сертификаты
+                  Документы в РФ
                 </h3>
                 <p class="advantages__card-text text-md fw-regular">
-                  Продукция соответствует требованиям российского рынка и
-                  международным стандартам качества.
+                  Прошли необходимые лабораторные испытания.
                 </p>
               </div>
             </div>
             <div class="advantages__card">
               <div class="advantages__icon">
-                <img src="assets/icons/certificate.svg" alt="" />
+                <img src="assets/icons/thumb-up.svg" alt="" />
               </div>
               <div class="advantages__card-body">
                 <h3 class="advantages__card-title text-xl fw-semibold">
-                  Сертификаты
+                  Отсутствие
                 </h3>
                 <p class="advantages__card-text text-md fw-regular">
-                  Продукция соответствует требованиям российского рынка и
-                  международным стандартам качества.
+                  неприятных запахов.
                 </p>
               </div>
             </div>
             <div class="advantages__card">
               <div class="advantages__icon">
-                <img src="assets/icons/certificate.svg" alt="" />
+                <img src="assets/icons/box.svg" alt="" />
               </div>
               <div class="advantages__card-body">
                 <h3 class="advantages__card-title text-xl fw-semibold">
-                  Сертификаты
+                  Стабильные партии
                 </h3>
                 <p class="advantages__card-text text-md fw-regular">
-                  Продукция соответствует требованиям российского рынка и
-                  международным стандартам качества.
+                  Параметры не изменяются от поставки к поставке.
                 </p>
               </div>
             </div>
@@ -337,7 +348,7 @@
           </div>
         </div>
       </section>
-      <section id="certificates" class="section certificates">
+      <!-- <section id="certificates" class="section certificates">
         <div class="container">
           <h2 class="certificates__title display-xl fw-extrabold">
             СЕРТИФИКАТЫ КАЧЕСТВА
@@ -360,14 +371,14 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
-      <div class="modal" id="certModal" onclick="closeModal()">
+      <!-- <div class="modal" id="certModal" onclick="closeModal()">
         <div class="modal__backdrop"></div>
         <img class="modal__img" id="modalImg" src="" alt="" />
-      </div>
+      </div> -->
 
-      <section id="contact" class="section contact">
+      <!-- <section id="contact" class="section contact">
         <div class="container">
           <div class="contact__card grid-12">
             <div class="contact__header">
@@ -435,7 +446,7 @@
                 </div>
               </div>
 
-              <!-- анти-бот -->
+              анти-бот
               <input type="text" name="website" style="display: none" />
 
               <button
@@ -455,10 +466,10 @@
             <img src="assets/images/pepper.png" alt="" role="presentation" />
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <div class="footer__inner">
           <a
@@ -472,7 +483,7 @@
           </p>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/main.js"></script>
