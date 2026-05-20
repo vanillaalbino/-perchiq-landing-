@@ -48,6 +48,7 @@ window.addEventListener("scroll", () => {
 
   slidesOffsetBefore: 32,
   slidesOffsetAfter: 32,
+  grabCursor: true,
 
   navigation: {
     nextEl: ".about__btn--next",
@@ -85,6 +86,28 @@ function openModal(item) {
 function closeModal() {
   document.getElementById("certModal").classList.remove("active");
 }
+
+const certificatesSwiper = new Swiper(".certificates__swiper", {
+  slidesPerView: 1.1,
+  spaceBetween: 12,
+  loop: false,
+  grabCursor: true,
+
+  pagination: {
+    el: ".about__pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1.3,
+    },
+
+    481: {
+      slidesPerView: 2.3,
+    },
+  },
+});
 
 /* ── CONTACT ── */
 

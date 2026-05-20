@@ -572,15 +572,21 @@ gap: clamp(48px, 5vw, 64px);
 /* ── CERTIFICATES ── */
 
 .certificates__title {
-  margin-bottom: 48px;
   color: var(--text-primary-light);
 }
 
-.certificates__grid {
+.certificates__grid--desktop {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
+
+.certificates__mobile--wrapper{
+  display: none; 
+}
+
+
+
 
 .certificates__item {
   cursor: pointer;
@@ -623,10 +629,17 @@ gap: clamp(48px, 5vw, 64px);
 .modal__img {
   position: relative;
   z-index: 1;
-    height: 80vh;
-  max-width: 50vw;
+
+  max-width: 80vw;
+  max-height: 80vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
   border-radius: 8px;
-  box-shadow: 0 32px 80px rgba(0,0,0,0.25);
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -667,7 +680,7 @@ gap: clamp(48px, 5vw, 64px);
   grid-column: 2 / span 10;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 48px; 
 }
 
 .form__fields{
@@ -736,6 +749,7 @@ gap: clamp(48px, 5vw, 64px);
   text-align: center;
   font-size: 12px;
   color:var(--text-muted);
+  margin-top: -16px;
 }
 
 /* Pepper image */
@@ -743,13 +757,9 @@ gap: clamp(48px, 5vw, 64px);
   position: absolute;
   right: 32px;
   bottom: -120px;
-  /* width: 280px; */
   pointer-events: none;
 }
-/* 
-.contact__image img {
-  width: 100%;
-} */
+
 
 /* FOOTER */
 
@@ -771,6 +781,14 @@ gap: clamp(48px, 5vw, 64px);
 .footer__copy {
   color: var(--text-muted);
 }
+
+
+@media (max-width: 1100px) {
+  .form__row--3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 
   @media (max-width: 768px) {
 
@@ -977,15 +995,59 @@ margin-bottom: -240px;
 
 }
 
+/* ── CERTIFICATES ── */
 
+ .certificates__grid--desktop {
+    display: none;
+  }
 
+  .certificates__mobile--wrapper{
+   display: block;
+}
 
+  .modal__backdrop {
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
 
+  .modal__img {
+    max-width: 95vw;
+    max-height: 85vh;
+    border-radius: 6px;
+  }
 
+/* ── CONTACT ── */
 
+.contact__image {
+display: none;
+}
 
+/* Form */
+.contact__card{
+  background: none;
+  width: 100%;
+  height: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 
+  .form__row--2,
+  .form__row--3 {
+    grid-template-columns: 1fr;
+  }
 
+/* FOOTER */
+.footer {
+  padding: 48px;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+}
 
 }
 
