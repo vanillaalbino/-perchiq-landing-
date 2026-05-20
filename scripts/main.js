@@ -94,7 +94,7 @@ const certificatesSwiper = new Swiper(".certificates__swiper", {
   grabCursor: true,
 
   pagination: {
-    el: ".about__pagination",
+    el: ".certificates__pagination",
     clickable: true,
   },
 

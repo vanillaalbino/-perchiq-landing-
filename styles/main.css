@@ -1005,6 +1005,27 @@ margin-bottom: -240px;
    display: block;
 }
 
+  .certificates__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+
+
+.certificates__pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.certificates__pagination .swiper-pagination-bullet-active {
+  background: var(--gray-900);
+}
+
   .modal__backdrop {
     background: rgba(0, 0, 0, 0.65);
     backdrop-filter: blur(4px);
