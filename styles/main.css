@@ -1060,7 +1060,7 @@ display: none;
 
 /* FOOTER */
 .footer {
-  padding: 48px;
+   padding:  48px 0;
 }
 
 .footer__inner {
