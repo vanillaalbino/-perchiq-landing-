@@ -579,6 +579,7 @@ gap: clamp(48px, 5vw, 64px);
 .certificates__title {
   color: var(--text-primary-light);
   width: 80%;
+  overflow-wrap: break-word;
 }
 
 .certificates__grid--desktop {
