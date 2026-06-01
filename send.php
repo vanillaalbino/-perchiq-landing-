@@ -13,10 +13,10 @@ $phone = htmlspecialchars($_POST['phone'] ?? '');
 $city = htmlspecialchars($_POST['city'] ?? '');
 
 // куда отправлять
-$to = "mail@домен.ru";
+$to = "info@pharmaelement.com";
 
 // тема
-$subject = "Заявка с сайта домен.ru";
+$subject = "Заявка с сайта perchiq.ru";
 
 // текст письма
 $message = "Новая заявка:\n\n";
@@ -28,7 +28,7 @@ $message .= "Город: $city\n";
 
 // заголовки
 $headers = [];
-$headers[] = "From: Сайт <mail@домен.ru>";
+$headers[] = "From: Perchiq <no-reply@perchiq.ru>";
 $headers[] = "Reply-To: $email";
 $headers[] = "Content-Type: text/plain; charset=UTF-8";
 
