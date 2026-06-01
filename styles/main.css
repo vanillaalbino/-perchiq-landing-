@@ -116,6 +116,75 @@ body {
   column-gap: 32px; 
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(217, 217, 217, 0.01);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+} 
+
+.modal__content {
+  position: relative;
+  z-index: 1;
+  background: var(--gray-700);
+  border-radius: 16px;
+  padding: 48px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  cursor: default;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.modal__text{
+  color: var(--text-secondary);
+  margin-top: -8px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.modal__icon {
+  width: 72px;
+  height: 72px;
+  background: var(--bg-primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-success__icon {
+  color: #2e7d32;
+}
+
 /* ── BUTTONS ── */
 
 .btn {
@@ -488,6 +557,10 @@ gap: clamp(48px, 5vw, 64px);
   justify-content: center;
 }
 
+.advantages__icon img {
+  color: white;
+}
+
 .advantages__card-body{
     display: flex;
   flex-direction: column;
@@ -611,32 +684,15 @@ gap: clamp(48px, 5vw, 64px);
   transform: scale(1.03);
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
+.cert-modal {
   align-items: flex-start;
-  justify-content: center;
   overflow-y: auto;
   padding: 40px 20px;
   cursor: pointer;
 }
 
-.modal.active {
-  display: flex;
-}
 
-.modal__backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(217, 217, 217, 0.01);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  
-}
-
-.modal__img {
+.cert-modal__img {
   position: relative;
   z-index: 1;
   width: auto;
@@ -1034,13 +1090,8 @@ margin-bottom: -240px;
   background: var(--gray-900);
 }
 
-  .modal__backdrop {
-    background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-  }
 
-  .modal__img {
+  .cert-modal__img {
     max-width: 95vw;
     max-height: 85vh;
     border-radius: 6px;

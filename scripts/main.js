@@ -140,13 +140,17 @@ form.addEventListener("submit", async (e) => {
   const result = await response.text();
 
   if (result === "ok") {
-    form.innerHTML = `
-      <div class="form-success">
-        <h3>Заявка отправлена</h3>
-        <p>Мы свяжемся с вами в ближайшее время</p>
-      </div>
-    `;
+    openFormSuccess();
   } else {
     alert("Ошибка отправки");
   }
 });
+
+function openFormSuccess() {
+  document.getElementById("formSuccessModal").classList.add("active");
+}
+
+function closeFormSuccess() {
+  document.getElementById("formSuccessModal").classList.remove("active");
+  form.reset();
+}
