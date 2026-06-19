@@ -47,16 +47,16 @@
 /* ── TYPOGRAPHY ── */
 
 /* Display */
-.display-3xl { font-size: clamp(64px, 8vw, 140px); line-height: 1; }
+.display-3xl { font-size: clamp(64px, 8vw, 92px); line-height: 1; }
 .display-2xl { font-size: 100px; line-height: 80px; }
-.display-xl  { font-size: clamp(36px, 5vw, 60px);  line-height: 1.2; }
+.display-xl  { font-size: clamp(28px, 5vw, 60px);  line-height: 1.2; }
 .display-lg  { font-size: 48px;  line-height: 60px; }
 .display-md  { font-size: 36px;  line-height: 44px; }
 .display-sm  { font-size: 30px;  line-height: 38px; }
 
 /* Text */
 .text-xl  { font-size: 22px; line-height: 30px; }
-.text-lg  { font-size: 18px; line-height: 26px; }
+.text-lg  { font-size: 17px; line-height: 24px; }
 .text-md  { font-size: 15px; line-height: 1.6; }
 .text-sm  { font-size: 14px; line-height: 20px; }
 .text-xs  { font-size: 12px; line-height: 18px; }
@@ -124,6 +124,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
+   overflow: hidden;
 }
 
 .modal.active {
@@ -407,26 +408,32 @@ gap: clamp(48px, 5vw, 64px);
   gap: 24px; z-index: 1;
 }
 
-
 .hero__visual {
   position: absolute;
-  right: 0;
-  top: 60%;
+  right: -12%;
+  top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
+  width: clamp(360px, 55vw, 820px);   /* плавающая ширина блока */
+ 
 }
 
 .hero__glove {
   position: relative;
   z-index: 1;
+  display: block;
+  width: 100%;        /* перчатка занимает весь блок */
+  height: auto;
 }
 
 .hero__gradient {
-  width: 1200px;
+  width: 160%;        /* относительно блока, а не в px → масштабируется вместе */
   height: auto;
   position: absolute;
- left: 0;
-  transform: translateX(-40%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
 /* ── ABOUT ── */
@@ -575,6 +582,7 @@ gap: clamp(48px, 5vw, 64px);
 
 .video__title {
   color: var(--text-primary-light);
+  overflow-wrap: break-word;
 }
 
 .video__video {
@@ -651,8 +659,8 @@ gap: clamp(48px, 5vw, 64px);
 
 .certificates__title {
   color: var(--text-primary-light);
-  width: 80%;
-  overflow-wrap: break-word;
+  text-transform: uppercase;
+   overflow-wrap: break-word;
 }
 
 .certificates__grid--desktop {
@@ -974,21 +982,30 @@ text-align: center;  width: 100%;
   }
 
 
-  .hero__visual {
+ .hero__visual {
     position: relative;
+    top: auto;    
+    left: auto;
+    right: auto;
+    transform: none; 
     width: 100%;
+
     display: flex;
     justify-content: center;
-    margin-top: 160px;
-margin-bottom: -240px;
-
+    margin-bottom: 100px;
+    margin-top: -100px;
   }
 
-   .hero__glove {
-    width: max(240px, 40vw);
-  }
 
-  .hero__gradient {
+
+
+
+
+   /* .hero__glove {
+       margin-top: -1000; 
+  } */
+
+  /* .hero__gradient {
    
     left: 50%;
     transform: translateX(-50%);
@@ -998,7 +1015,7 @@ margin-bottom: -240px;
 
   width: clamp(600px, 80vw, 1200px);
  
-  }
+  } */
 
 /* ── ABOUT ── */
 
@@ -1033,6 +1050,10 @@ margin-bottom: -240px;
 }
 /* ── ADVANTAGES ── */
 
+.advantages__title{
+  overflow-wrap: break-word;
+}
+
 .advantages__grid {
   grid-template-columns: repeat(1, 1fr);
 }
@@ -1045,6 +1066,10 @@ margin-bottom: -240px;
 }
 
 /* ── CLIENTS ── */
+
+.clients__title{
+    overflow-wrap: break-word;
+}
 
 .clients__grid {
   grid-template-columns: repeat(1, 1fr);
@@ -1091,8 +1116,13 @@ margin-bottom: -240px;
 }
 
 
+ .cert-modal {
+    align-items: center;
+  
+  }
+
   .cert-modal__img {
-    max-width: 95vw;
+    max-width: 90vw;
     max-height: 85vh;
     border-radius: 6px;
   }
@@ -1129,5 +1159,6 @@ display: none;
     gap: 32px;
 }
 
-}
 
+
+  }
